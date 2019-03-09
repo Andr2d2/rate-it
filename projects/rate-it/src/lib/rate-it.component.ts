@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'rate-it',
+  selector: 'ng-rate-it',
   template: `
     <div class="rate {{ customClass}}">
       <span class="item" *ngFor="let unit of rangeAsArray">
