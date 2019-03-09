@@ -1,8 +1,21 @@
 {
   "name": "rate-it",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
-  }
+  },
+  "description": "Componente de avaliação (Rating componente)",
+  "keywords": ["angular", "rating", "rate", "avaliação", "nota"],
+  "homepage": "https://github.com/Andr2d2/rate-it",
+  "bugs":{
+    "url" : "https://github.com/Andr2d2/rate-it/issues",
+    "email" : "santosandreoliveira@gmail.com"
+  },
+  "person": {
+    "name": "André a.k.a Andr2d2",
+    "email": "santosandreoliveira@gmail.com",
+    "url": "https://github.com/Andr2d2"
+  },
+  "license": "MIT"
 }
