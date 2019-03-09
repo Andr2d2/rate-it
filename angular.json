@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "rate-it": {
+      "root": "projects/rate-it",
+      "sourceRoot": "projects/rate-it/src",
+      "projectType": "library",
+      "prefix": "rit",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/rate-it/tsconfig.lib.json",
+            "project": "projects/rate-it/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rate-it/src/test.ts",
+            "tsConfig": "projects/rate-it/tsconfig.spec.json",
+            "karmaConfig": "projects/rate-it/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rate-it/tsconfig.lib.json",
+              "projects/rate-it/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "rate-it-app"

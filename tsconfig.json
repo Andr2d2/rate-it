@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "rate-it": [
+        "dist/rate-it"
+      ],
+      "rate-it/*": [
+        "dist/rate-it/*"
+      ]
+    }
   }
 }
