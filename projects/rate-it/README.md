@@ -1,24 +1,55 @@
 # RateIt
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+Com este componente você poderá exibir em sua aplicações avaliações baseadas em números inteiros ou gera-las.
+Todo customizável, seja trocando os ícones que representar os valores, cores ou mesmo o *range* de notas.
+Desenvolvido com angular versão 7.2.0
 
-## Code scaffolding
+# Instalação
+Instalação do pacote:
+```
+npm i rate-it
+```
 
-Run `ng generate component component-name --project rate-it` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project rate-it`.
-> Note: Don't forget to add `--project rate-it` or else it will be added to the default project in your `angular.json` file. 
+Adicionando referência:
+```ts
+import { RateItModule } from 'rate-it';
 
-## Build
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    RateItModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng build rate-it` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Bindings
+```html
+<ng-rate-it
+  [range]="5"
+  [isLocked]="false"
+  [initialRate]="initialValue"
+  [placeholderIconClass]="'far fa-star'"
+  [rateIconClass]="'fas fa-star'"
+  (onChangeRate)="changeRate($event)">
+</ng-rate-it>
+```
+- ### Inputs
+    - **range** *(number, default = 5)* - range de notas disponíveis para avaliação;
+    - **isLocked** *(boolean, default = false)* - não recebe ação, somente exibição;
+    - **initialRate** *(number, default = 1)* - nota inicial;
+    - **placeholderIconClass** *(string, default = &#x2606;)* - classe de estilo com o ícone do range de notas;
+    - **rateIconClass** *(string, default = &#x2605;)* - classe de estilo com o ícone de avaliação dada.
+- ### Outputs
+    - **onChangeRate** *(function)* - callback com a nota selecionada.
+    
 
-## Publishing
-
-After building your library with `ng build rate-it`, go to the dist folder `cd dist/rate-it` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test rate-it` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ Quase todos os bindings são opcionais, exceto **onChangeRate**, podendo assim instânciar o componente como:
+ ```html
+ <ng-rate-it (onChangeRate)="changeRate($event)"></ng-rate-it>
+ ```
