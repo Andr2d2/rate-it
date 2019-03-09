@@ -1,7 +1,8 @@
 # RateIt
 
 Com este componente você poderá exibir em sua aplicações avaliações baseadas em números inteiros ou gera-las.
-Todo customizável, seja trocando os ícones que representar os valores, cores ou mesmo o *range* de notas.
+Customizável, seja trocando os ícones que representam os valores, cores ou mesmo o *range* de notas.
+
 Desenvolvido com angular versão 7.2.0
 
 # Instalação
@@ -47,7 +48,7 @@ export class AppModule { }
     - **rateIconClass** *(string, default = &#x2605;)* - classe de estilo com o ícone de avaliação dada.
 - ### Outputs
     - **onChangeRate** *(function)* - callback com a nota selecionada.
-    
+
 
  Quase todos os bindings são opcionais, exceto **onChangeRate**, podendo assim instânciar o componente como:
  ```html
