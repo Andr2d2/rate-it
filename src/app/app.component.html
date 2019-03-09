@@ -1,7 +1,34 @@
+<h2>Exemplos</h2>
+
+<p>Uso simples:</p>
+<ng-rate-it></ng-rate-it>
+
+
+<p>Valor inicial:</p>
+<ng-rate-it [initialRate]="3"></ng-rate-it>
+
+<p>Range alto</p>
+<ng-rate-it [range]="10"></ng-rate-it>
+
+<p>Ícones customizados</p>
+<ng-rate-it
+  [placeholderIconClass]="'far fa-heart'"
+  [rateIconClass]="'fas fa-heart'">
+</ng-rate-it>
+
+<p>Sem interação</p>
+<ng-rate-it
+  [range]="9"
+  [isLocked]="true"
+  [initialRate]="5"
+  [placeholderIconClass]="'-empty far fa-heart'"
+  [rateIconClass]="'-filled fas fa-heart'">
+</ng-rate-it>
+
+<p>Callback</p>
 <ng-rate-it
   [range]="5"
   [isLocked]="false"
-  [customClass]="'teste'"
   [initialRate]="initialValue"
   [placeholderIconClass]="'far fa-star'"
   [rateIconClass]="'fas fa-star'"

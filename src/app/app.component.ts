@@ -11,7 +11,7 @@ export class AppComponent {
   lock = false;
 
   changeRate(event: { newRate: number; }) {
-    this.rateValue = event.newRate;
+    alert(event.newRate);
   }
 
   ngOnInit() {}
