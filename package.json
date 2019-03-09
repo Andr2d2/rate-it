@@ -8,7 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build_lib": "ng build rate-it"
+    "build_lib": "ng build rate-it",
+    "npm_pack": "cd dist/rate-it && npm pack",
+    "copy-license": "copy .\\LICENSE .\\dist\\rate-it",
+    "package": "npm run build_lib && npm run npm_pack && npm run copy-license"
   },
   "private": true,
   "dependencies": {
